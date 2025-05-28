@@ -14,6 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            title
             ScrollView {
                 cards
             }
@@ -21,6 +22,13 @@ struct ContentView: View {
             cardCountAdjusters
         }
         .padding()
+        .foregroundColor(Color.blue)
+    }
+    
+    var title: some View {
+        Text("Memorize")
+            .font(.title)
+            .fontDesign(.serif)
     }
     
     var cards: some View {
@@ -30,7 +38,6 @@ struct ContentView: View {
                     .aspectRatio(2/3, contentMode: .fit)
             }
         }
-        .foregroundColor(Color.blue)
     }
     
     var cardCountAdjusters: some View {
